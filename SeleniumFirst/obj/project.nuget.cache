@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "ODTLrhpjHrPW+7QbphtG6dfbwobIkaoRSGx/AY8vcJSz17LpIZWH1DBtHmefb66uP9hVTfWP6VIfYY5vW/+TCw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gamer\\source\\repos\\SeleniumFirst\\SeleniumFirst\\SeleniumFirst.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gamer\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Gamer\\.nuget\\packages\\selenium.chrome.webdriver\\85.0.0\\selenium.chrome.webdriver.85.0.0.nupkg.sha512",
+    "C:\\Users\\Gamer\\.nuget\\packages\\selenium.support\\4.8.0\\selenium.support.4.8.0.nupkg.sha512",
+    "C:\\Users\\Gamer\\.nuget\\packages\\selenium.webdriver\\4.8.0\\selenium.webdriver.4.8.0.nupkg.sha512",
+    "C:\\Users\\Gamer\\.nuget\\packages\\selenium.webdriver.chromedriver\\109.0.5414.7400\\selenium.webdriver.chromedriver.109.0.5414.7400.nupkg.sha512"
+  ],
+  "logs": []
+}
