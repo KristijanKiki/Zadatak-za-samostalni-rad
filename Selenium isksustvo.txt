@@ -1,0 +1,20 @@
+Kratak opis za Selenium.
+
+Sama instalacija i testiranje je detaljno objašnjeno i nije bilo nekih velikih poteškoća.
+Najveci problem sa kojim sam se susreo je bio taj sto ova selenium varijanta radi samo sa google chrome 85 varijantom
+pa sam izgubio dosta vremena pronalaska prave varijante google chrome-a. 
+Još jedan problem je taj što prilikom inspekcije elementata ne pronalazim lagano nazive elementa pa sam eksperimentirao sa
+FindElement(By.Name 
+FindElement(By.Id
+FindElement(By.Class ...
+
+Planirao sam napraviti neki kratki test za login na nekoj random stranici ali vidim da je to idući zadatak tako da sam napravio
+u ovom zadatku samo da otvori google i pretrazi Osijek wikipedija 
+
+Također problem koji se pojavio svaki put kada otvorim google chrome pojavi mi se pitanje da prihvatim sve njihove kolačiće.
+
+A najiritantniji problem je taj da mi se google chrome automatski azurira na noviju verziju pa ga svakih pola sata - sat moram
+deinstalirati pa ponovo instalirati novu varijantu.
+
+
+Kristijan Štrk
