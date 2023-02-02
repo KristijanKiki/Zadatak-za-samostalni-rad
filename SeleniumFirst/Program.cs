@@ -1,4 +1,4 @@
-﻿using OpenQA.Selenium;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SeleniumFirst
 {
-    class Program
+    class Program2
     {
         static void Main(string[] args)
         {
@@ -17,26 +17,21 @@ namespace SeleniumFirst
             //create the reference for the browser  
             IWebDriver driver = new ChromeDriver();
             // navigate to URL  
-            driver.Navigate().GoToUrl("https://www.google.com/");
-            Thread.Sleep(2000);
-
-            IWebElement ele2 = driver.FindElement(By.Id("L2AGLb"));
-            ele2.Click();
-            Thread.Sleep(2000);
-
-            // identify the Google search text box  
-            IWebElement ele = driver.FindElement(By.Name("q"));
-            //enter the value in the google search text box  
-            ele.SendKeys("Osijek wikipedija");
-            Thread.Sleep(2000);
-
-
-
-            //identify the google search button  
-            IWebElement ele1 = driver.FindElement(By.Name("btnK"));
-            // click on the Google search button  
+            driver.Navigate().GoToUrl("https://www.youtube.com/");
+            Thread.Sleep(5000);
+            IWebElement ele1 = driver.FindElement(By.XPath("/html/body/ytd-app/ytd-consent-bump-v2-lightbox/tp-yt-paper-dialog/div[4]/div[2]/div[6]/div[1]/ytd-button-renderer[2]/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]"));
             ele1.Click();
             Thread.Sleep(3000);
+
+
+            IWebElement ele2 = driver.FindElement(By.XPath("/html/body/ytd-app/div[1]/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/form/div[1]/div[1]/input"));
+            ele2.SendKeys("Selenium coding tutorial");
+            Thread.Sleep(2000);
+
+
+            IWebElement ele3 = driver.FindElement(By.XPath("/html/body/ytd-app/div[1]/div/ytd-masthead/div[3]/div[2]/ytd-searchbox/button"));
+            ele3.Click();
+            Thread.Sleep(2000);
 
             //close the browser  
             driver.Close();
