@@ -99,6 +99,60 @@ namespace SeleniumFirst
             String textele8 = ele8.Text;
             if (textele8.Contains("PRODUCTS"))
                 Console.WriteLine("Test 1.4. :Kada se unese standardni user i ispravna lozinka otvori se products page");
+            
+            //test 1.4.1
+            IWebElement productBackpack = driver.FindElement(By.Id("item_4_img_link"));
+            Boolean statusBackpack = productBackpack.Enabled;
+            IWebElement productBlackTshirt = driver.FindElement(By.Id("item_1_img_link"));
+            Boolean statusBTshirt = productBlackTshirt.Enabled;
+            IWebElement productRedTshirt = driver.FindElement(By.Id("item_3_img_link"));
+            Boolean statusRTshirt = productRedTshirt.Enabled;
+            IWebElement productJacket = driver.FindElement(By.Id("item_5_img_link"));
+            Boolean statusJacket = productJacket.Enabled;
+            IWebElement productBikeLight = driver.FindElement(By.Id("item_0_img_link"));
+            Boolean statusBikeLight = productBikeLight.Enabled;
+            IWebElement productOnesie = driver.FindElement(By.Id("item_2_img_link"));
+            Boolean statusOnesie = productOnesie.Enabled;
+
+
+            WebElement[] products = { (WebElement)productBackpack, (WebElement)productBikeLight, (WebElement)productBlackTshirt, (WebElement)productJacket, (WebElement)productOnesie, (WebElement)productRedTshirt};
+            Console.WriteLine("Koji produkt želite kliknit (brojevi od 1-6)");
+            int productInput = Convert.ToInt32(Console.ReadLine());
+
+            if (statusBackpack && statusBTshirt && statusRTshirt && statusBikeLight && statusJacket && statusOnesie == true) 
+            {
+                IWebElement randomProduct = products[productInput-1];
+                randomProduct.Click();
+                Thread.Sleep(2500);
+                IWebElement backToProducts = driver.FindElement(By.XPath("/html/body/div/div/div/div[1]/div[2]/div/button"));
+                Console.WriteLine("Test 1.4.1. :Sve slike se mogu kliknuti i zoomira se slika i dobije detaljni opis produkta");
+                Boolean backToProductsButton = backToProducts.Enabled;
+                Thread.Sleep(3000);
+                //test
+                if (backToProductsButton == true)              
+                {
+                    Console.WriteLine("Test 1.4.1.1. :Kada je produkt zoomiran postoji back to products button koji se moze kliknuti");
+                    backToProducts.Click();
+                }
+
+            }
+            
+            //test 1.4.1.2
+            Thread.Sleep(2000);
+            IWebElement shoppingCartIcon = driver.FindElement(By.XPath("/html/body/div/div/div/div[1]/div[1]/div[3]/a"));
+            Boolean statusCart = shoppingCartIcon.Enabled;
+            if (statusCart == true)
+                shoppingCartIcon.Click();
+
+            Thread.Sleep(1000);
+            IWebElement yourCartPage = driver.FindElement(By.XPath("/html/body/div/div/div/div[1]/div[2]"));
+            String yourCartTest = yourCartPage.Text;
+            Console.WriteLine(yourCartTest);
+            
+            //test 1.4.1.3.
+
+            if (yourCartTest.Contains ("YOUR CART"));
+                Console.WriteLine("Test 1.4.1.2. shopping cart icon je clickable i kada se klikne ide se na your cart page");
 
             Console.Write("test case ended ");
         }
