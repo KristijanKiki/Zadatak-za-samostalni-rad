@@ -1,0 +1,6 @@
+Isprike sto nisam stigao uploadati na vrijeme rješenje. 
+Imao sam malo vecih poteskoca sa instalacijom specflowa, pa sam na kraju morao instalirati novi visual studio 2022 
+i to mi je novo okruženje pa se nisam bas 100% snasao.
+
+I takoder se nadam da sam dobro koristio github.
+
